@@ -9,17 +9,29 @@ Project: `C:\Users\Admin\Projects\clothing-shop`
 | Local dev (`npm run dev`) | Done — http://localhost:3000 |
 | GitHub repo | Done — https://github.com/manishdev1107/clothing-shop |
 | Vercel production | Done — https://clothing-shop-weld-rho.vercel.app |
-| GoDaddy custom domain | **Pending** — need your domain name |
+| GoDaddy custom domain | **Pending DNS** — configure records in GoDaddy for `labelswaya.com` |
 
-## Connect your GoDaddy domain (last step)
+## Connect labelswaya.com in GoDaddy
 
-1. Tell your agent your exact domain (e.g. `myclothshop.com`).
-2. In [Vercel → clothing-shop → Settings → Domains](https://vercel.com/manish-dev-s-projects/clothing-shop/settings/domains), add:
-   - `yourdomain.com`
-   - `www.yourdomain.com`
-3. Vercel shows DNS records (usually **A** `@` → `76.76.21.21` and **CNAME** `www` → `cname.vercel-dns.com`).
-4. In GoDaddy: **My Products → DNS** → add/update those records.
-5. Wait 5–60 minutes for DNS propagation. Vercel issues HTTPS automatically.
+Domains added in Vercel. Update DNS in GoDaddy:
+
+1. Sign in at [godaddy.com](https://www.godaddy.com) → **My Products** → **DNS** for `labelswaya.com`.
+2. **Remove or edit conflicting records** — delete old **A** records for `@` and `www` that point to GoDaddy parking (e.g. `Parked` or `WebsiteBuilder Site`).
+3. **Add/update these records:**
+
+| Type | Name | Value | TTL |
+|---|---|---|---|
+| **A** | `@` | `76.76.21.21` | 600 (or default) |
+| **A** | `www` | `76.76.21.21` | 600 (or default) |
+
+4. Save changes. DNS can take **5–60 minutes** (sometimes up to 48 hours).
+5. Vercel will email you when the domain is verified and HTTPS is ready.
+
+**Live URLs after DNS propagates:**
+- https://labelswaya.com
+- https://www.labelswaya.com
+
+**Current Vercel URL (works now):** https://clothing-shop-weld-rho.vercel.app
 
 ## Useful commands
 
@@ -35,6 +47,7 @@ git push             # push changes to GitHub
 - [x] `npm run dev` works on your machine
 - [x] Code is on GitHub
 - [x] Site loads on Vercel’s `.vercel.app` URL
-- [ ] Your GoDaddy domain opens the site over HTTPS
+- [x] Your GoDaddy domain added in Vercel (`labelswaya.com`, `www.labelswaya.com`)
+- [ ] DNS records updated in GoDaddy → site opens at https://labelswaya.com
 
 Next step: **Phase 1** — build the clothing catalog (Header, product pages, filters).
