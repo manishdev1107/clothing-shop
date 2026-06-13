@@ -18,7 +18,7 @@ export default function HomePage() {
             Style that moves with you
           </h1>
           <p className="mt-4 max-w-xl text-lg text-stone-600">
-            Welcome to {SITE_NAME} — curated clothing and accessories for men and women.
+            Welcome to {SITE_NAME} — curated women&apos;s clothing and accessories.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
@@ -28,10 +28,10 @@ export default function HomePage() {
               Shop women
             </Link>
             <Link
-              href="/shop/men"
+              href="/shop/accessories"
               className="rounded-full border border-stone-300 bg-white px-6 py-3 text-sm font-medium text-stone-900 transition hover:border-stone-400"
             >
-              Shop men
+              Shop accessories
             </Link>
           </div>
         </div>
@@ -39,7 +39,7 @@ export default function HomePage() {
 
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <h2 className="text-2xl font-semibold text-stone-900">Shop by category</h2>
-        <div className="mt-6 grid gap-4 sm:grid-cols-3">
+        <div className="mt-6 grid gap-4 sm:grid-cols-2">
           {CATEGORIES.map((cat) => (
             <Link
               key={cat.slug}

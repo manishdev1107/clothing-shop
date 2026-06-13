@@ -8,18 +8,13 @@ export default function Footer() {
         <div>
           <p className="text-lg font-semibold text-stone-900">{SITE_NAME}</p>
           <p className="mt-2 text-sm text-stone-600">
-            Curated clothing and accessories for everyday style.
+            Curated women&apos;s clothing and accessories for everyday style.
           </p>
         </div>
 
         <div>
           <p className="text-sm font-semibold text-stone-900">Shop</p>
           <ul className="mt-3 space-y-2 text-sm text-stone-600">
-            <li>
-              <Link href="/shop/men" className="hover:text-stone-900">
-                Men
-              </Link>
-            </li>
             <li>
               <Link href="/shop/women" className="hover:text-stone-900">
                 Women

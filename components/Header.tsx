@@ -3,7 +3,6 @@ import { SITE_NAME } from "@/lib/site";
 import { CATEGORIES } from "@/types/product";
 
 const navLinks = [
-  { href: "/shop/men", label: "Men" },
   { href: "/shop/women", label: "Women" },
   { href: "/shop/accessories", label: "Accessories" },
   { href: "/about", label: "About" },

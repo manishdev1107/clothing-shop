@@ -17,7 +17,7 @@ export default function AboutPage() {
           seasons.
         </p>
         <p>
-          Our catalog includes menswear, womenswear, and accessories — each item chosen to mix and
+          Our catalog includes womenswear and accessories — each item chosen to mix and
           match easily. Whether you are refreshing your wardrobe or looking for a single statement
           piece, we aim to make shopping straightforward and enjoyable.
         </p>

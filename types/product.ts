@@ -1,4 +1,4 @@
-export type Category = "men" | "women" | "accessories";
+export type Category = "women" | "accessories";
 
 export type Size = "XS" | "S" | "M" | "L" | "XL";
 
@@ -25,11 +25,6 @@ export const CATEGORIES: {
   label: string;
   description: string;
 }[] = [
-  {
-    slug: "men",
-    label: "Men",
-    description: "Everyday essentials and statement pieces for him.",
-  },
   {
     slug: "women",
     label: "Women",
